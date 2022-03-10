@@ -24,3 +24,4 @@ ALTER TABLE groups
 ADD `status-2` longtext;
 
 5:
+DELETE FROM learners WHERE id= 1;

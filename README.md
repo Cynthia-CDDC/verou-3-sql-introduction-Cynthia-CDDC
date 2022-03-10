@@ -47,5 +47,8 @@ ON groups.id = 1 AND coaches.group_id = 1
 WHERE coaches.id = 1;
 
 7 b:
-SELECT groups.*, coaches.*, learners.* FROM coaches LEFT JOIN (groups JOIN learners ON learners.active = 1 AND learners.group_id = 1) ON groups.id = 1 AND coaches.group_id = 1 WHERE coaches.id = 1;
+SELECT groups.*, coaches.*, learners.* 
+FROM coaches 
+LEFT JOIN (groups JOIN learners ON learners.active = 1 AND learners.group_id = 1) ON groups.id = 1 AND coaches.group_id = 1 
+WHERE coaches.id = 1;
 

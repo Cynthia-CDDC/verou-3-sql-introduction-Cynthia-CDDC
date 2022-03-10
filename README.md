@@ -22,6 +22,19 @@ WHERE id = 1;
 or 4 b:
 ALTER TABLE groups
 ADD `status-2` longtext;
+SET status = 'still no inspiration !'
+WHERE id = 1;
 
 5:
 DELETE FROM learners WHERE id= 1;
+
+6: 
+If I assume that several coaches and learners can belong to one group only:
+
+give tables 'coaches' and 'learners' a new field 'group_id' in SQL
+ALTER TABLE coaches
+ADD `group_id` int;
+ALTER TABLE learners
+ADD `group_id` int;
+
+then give each coach and each learner the id of the group they belong to

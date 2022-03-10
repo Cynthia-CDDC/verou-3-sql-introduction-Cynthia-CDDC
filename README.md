@@ -38,3 +38,10 @@ ALTER TABLE learners
 ADD `group_id` int;
 
 then give each coach and each learner the id of the group they belong to
+
+7 a:
+SELECT groups.*, coaches.* 
+FROM coaches 
+LEFT JOIN groups 
+ON groups.id = 1 AND coaches.group_id = 1 
+WHERE coaches.id = 1;

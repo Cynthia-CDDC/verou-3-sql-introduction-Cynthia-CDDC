@@ -29,7 +29,7 @@ WHERE id = 1;
 DELETE FROM learners WHERE id= 1;
 
 6: 
-If I assume that coaches and learners can belong to one group only but a group can have several coaches and learners:
+If I assume that several coaches and learners can belong to one group only:
 
 give tables 'coaches' and 'learners' a new field 'group_id' in SQL
 ALTER TABLE coaches
@@ -38,10 +38,3 @@ ALTER TABLE learners
 ADD `group_id` int;
 
 then give each coach and each learner the id of the group they belong to
-
-7 a:
-SELECT coaches.name, groups.name 
-FROM coaches 
-LEFT JOIN groups 
-ON groups.id = coaches.group_id 
-WHERE coaches.id = 2;
